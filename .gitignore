@@ -15,3 +15,4 @@ public/uploads/*
 use-cases/*
 _ide_helper.php
 .meta.phpstorm.php
+files/*

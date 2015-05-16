@@ -10,7 +10,6 @@ abstract class BaseRepository
 {
 
     /**
-     * @param $className
      * @return mixed
      */
     public function getCategory()
