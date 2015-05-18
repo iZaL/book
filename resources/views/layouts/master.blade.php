@@ -19,15 +19,9 @@
     <meta name="viewport" content="width=device-width">
 
     @section('style')
-        {{--<style>--}}
-            {{--@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);--}}
-            {{--html,body {--}}
-                {{--font-family: 'Droid Arabic Kufi' !important;--}}
-            {{--}--}}
-            {{--h1,h2,h3,h4,span,p,div,table {--}}
-                {{--font-family: 'Droid Arabic Kufi' !important;--}}
-            {{--}--}}
-        {{--</style>--}}
+        <style>
+            @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+        </style>
         <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         @if(App::getLocale() == 'ar')
             <link href="/bower_components/bootstrap-rtl/dist/css/bootstrap-rtl.css" rel="stylesheet">
