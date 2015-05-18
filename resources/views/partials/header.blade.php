@@ -6,29 +6,36 @@
     <!-- Div for shade line -->
 
     <div class="row hidden-print">
-        <div class="col-xs-12 col-sm-offset-12 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-8 col-lg-8 ">
+        <div class="col-xs-12">
 
             <!-- START CONTENT ITEM -->
             <nav class="navbar navbar-right header-nav" role="navigation">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account</a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ trans('word.account') }}</a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="dropdown-content">
-                                    <br>
-                                    <form role="form">
-                                        <input type="text" class="form-control" placeholder="Username"><br>
-                                        <input type="password" class="form-control" placeholder="Password"><br>
-                                        <button class="btn btn-default">reset</button>
-                                        <button type="submit" class="btn btn-primary">login</button>
-                                    </form>
-                                    <br>
+                                    {!! Form::open(['url' => '/auth/login', 'method' => 'post']) !!}
+                                    <div class="form-group">
+                                        {!! Form::text('email', null , ['class' => 'form-control','placeholder'=>trans('word.email')]) !!}
+                                    </div>
+                                    <div class="form-group">
+                                        {!! Form::password('password', ['class' => 'form-control','placeholder'=>trans('word.password')]) !!}
+                                    </div>
+                                    <div class="form-group">
+                                        {!! Form::submit(trans('word.login'), ['class' => 'form-control']) !!}
+                                    </div>
+                                    {!! Form::close() !!}
                                 </div>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="column1.html">Arabic</a></li>
+                    @if(App::getLocale() == 'en')
+                        <li><a href="{{ action('LocaleController@setLocale',['lang'=>'ar'])}}">العربية</a></li>
+                    @else
+                        <li><a href="{{ action('LocaleController@setLocale',['lang'=>'en'])}}">En</a></li>
+                    @endif
                 </ul>
             </nav>
             <!-- END CONTENT ITEM -->
@@ -52,7 +59,7 @@
             <div class="input-group form-search header-search">
                 <input class="form-control search-query" type="text" placeholder="Search all books...">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Search</button>
+                    <button class="btn btn-default" type="button">{{ trans('word.search') }}</button>
                 </span>
             </div>
             <!-- END CONTENT ITEM -->

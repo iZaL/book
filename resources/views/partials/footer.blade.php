@@ -13,14 +13,6 @@
                     <li><a href="detail.html">Product B</a></li>
                     <li><a href="detail.html">Large product C</a></li>
                 </ul>
-                <ul class="unstyled">
-                    <li class="footer-title"><a href="category.html">Category 2</a></li>
-                    <li><a href="detail.html">Product item A</a></li>
-                    <li><a href="detail.html">Product B</a></li>
-                    <li><a href="detail.html">Large product C</a></li>
-                    <li><a href="detail.html">Product D</a></li>
-                    <li><a href="detail.html">Short E</a></li>
-                </ul>
                 <!-- END CONTENT ITEM -->
 
             </div>
@@ -33,12 +25,6 @@
                     <li><a href="detail.html">Product item A</a></li>
                     <li><a href="detail.html">Product B</a></li>
                     <li><a href="detail.html">Large product C</a></li>
-                    <li><a href="detail.html">Product D</a></li>
-                </ul>
-                <ul class="unstyled">
-                    <li class="footer-title"><a href="category.html">Category 4</a></li>
-                    <li><a href="detail.html">Product item A</a></li>
-                    <li><a href="detail.html">Product B</a></li>
                 </ul>
                 <!-- END CONTENT ITEM -->
 
@@ -53,13 +39,7 @@
                     <li><a href="detail.html">Product B</a></li>
                     <li><a href="detail.html">Large product C</a></li>
                 </ul>
-                <ul class="unstyled">
-                    <li class="footer-title"><a href="category.html">Category 6</a></li>
-                    <li><a href="detail.html">Product item A</a></li>
-                    <li><a href="detail.html">Product B</a></li>
-                    <li><a href="detail.html">Large product C</a></li>
-                    <li><a href="detail.html">Product D</a></li>
-                </ul>
+
                 <!-- END CONTENT ITEM -->
 
             </div>
@@ -72,17 +52,8 @@
                     <li><a href="detail.html">Product item A</a></li>
                     <li><a href="detail.html">Product B</a></li>
                     <li><a href="detail.html">Large product C</a></li>
-                    <li><a href="detail.html">Product D</a></li>
-                    <li><a href="detail.html">Short E</a></li>
                 </ul>
-                <ul class="unstyled">
-                    <li class="footer-title"><a href="category.html">Category 8</a></li>
-                    <li><a href="detail.html">Product item A</a></li>
-                    <li><a href="detail.html">Product B</a></li>
-                    <li><a href="detail.html">Large product C</a></li>
-                    <li><a href="detail.html">Product D</a></li>
-                    <li><a href="detail.html">Short E</a></li>
-                </ul>
+
                 <!-- END CONTENT ITEM -->
 
             </div>
@@ -95,16 +66,8 @@
                     <li><a href="detail.html">Product item A</a></li>
                     <li><a href="detail.html">Product B</a></li>
                     <li><a href="detail.html">Large product C</a></li>
-                    <li><a href="detail.html">Product D</a></li>
-                    <li><a href="detail.html">Short E</a></li>
                 </ul>
-                <ul class="unstyled">
-                    <li class="footer-title"><a href="category.html">Category 10</a></li>
-                    <li><a href="detail.html">Product item A</a></li>
-                    <li><a href="detail.html">Product B</a></li>
-                    <li><a href="detail.html">Large product C</a></li>
-                    <li><a href="detail.html">Product D</a></li>
-                </ul>
+
                 <!-- END CONTENT ITEM -->
 
             </div>
@@ -117,12 +80,7 @@
                     <li><a href="detail.html">Product item A</a></li>
                     <li><a href="detail.html">Product B</a></li>
                 </ul>
-                <ul class="unstyled">
-                    <li class="footer-title"><a href="category.html">Category 12</a></li>
-                    <li><a href="detail.html">Product item A</a></li>
-                    <li><a href="detail.html">Product B</a></li>
-                    <li><a href="detail.html">Large product C</a></li>
-                </ul>
+
                 <!-- END CONTENT ITEM -->
 
             </div>

@@ -298,3 +298,18 @@ td[align="center"] {
 .logo {
 	max-height:200px;
 }
+
+.quote{
+	line-height: 1.5em;
+}
+
+.subfooter {
+    font-size: .9em;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color: #112233;
+    font-style: italic;
+}
+
+.paddingTop10 {
+    padding-top:10px;
+}
