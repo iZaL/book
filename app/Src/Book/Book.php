@@ -1,9 +1,12 @@
 <?php namespace App\Src\Book;
 
 use App\Core\BaseModel;
+use App\Core\LocaleTrait;
 
-class Book extends BaseModel {
+class Book extends BaseModel
+{
 
+    use LocaleTrait;
     /**
      * The database table used by the model.
      *
@@ -18,4 +21,5 @@ class Book extends BaseModel {
      */
     protected $guarded = ['id'];
 
+    protected $localeStrings = ['title'];
 }

@@ -44,6 +44,7 @@ class PublishBook extends Command implements SelfHandling
      * Execute the command.
      *
      * @param BookRepository $bookRepository
+     * @return static
      */
     public function handle(BookRepository $bookRepository)
     {
@@ -52,6 +53,8 @@ class PublishBook extends Command implements SelfHandling
 
         // Fire Events
         event(new BookPublished($book));
+
+        return $book;
     }
 
     private function storeInDB(BookRepository $bookRepository)

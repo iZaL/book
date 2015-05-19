@@ -47,6 +47,7 @@ class BooksController extends Controller
     public function store(CreateBookRequest $request)
     {
         // dispatch the command
-        $this->dispatchFrom(PublishBook::class, $request);
+        $a = $this->dispatchFrom(PublishBook::class, $request);
+        dd($a);
     }
 }

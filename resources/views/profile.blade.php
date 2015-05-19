@@ -16,7 +16,39 @@
                 <div class="tab-pane active" id="step1">
                     <div class="row">
                         <div class="col-xs-12 paddingTop10">
-                            Books
+                            <table class="table table-bordered table-order">
+                                <thead>
+                                <tr>
+                                    <th class="hidden-xs">&nbsp;</th>
+                                    <th></th>
+                                    <th>Total Pages</th>
+                                    <th>Status</th>
+                                    <th>Last Edited</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($books as $book)
+                                    <tr>
+                                        <td class="hidden-xs"><img src="img/product_01.jpg" width="75"></td>
+                                        <td>
+                                            <a href="detail.html">{!! $book->title !!}</a>
+
+                                            <p>{!! \Str::limit(strip_tags($book->content)) !!}</p>
+                                        </td>
+                                        <td>
+                                            <span class="label label-success">free</span>
+
+                                        </td>
+                                        <td align="right">
+                                            <span>&euro; 123,- </span>
+                                        </td>
+                                        <td align="right">
+                                            <span>&euro; 123,- </span>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

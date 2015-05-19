@@ -355,3 +355,7 @@ td[align="center"] {
     font-family: 'Droid Arabic Kufi' !important;
     font-size: 1.2em;
 }
+
+.ethiopic {
+    font-family: 'Droid Sans Ethiopic', sans-serif;
+}

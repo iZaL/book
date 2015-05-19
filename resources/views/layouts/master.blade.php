@@ -21,6 +21,7 @@
     @section('style')
         <style>
             @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+            @import url(http://fonts.googleapis.com/earlyaccess/droidsansethiopic.css);
         </style>
         <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         @if(App::getLocale() == 'ar')

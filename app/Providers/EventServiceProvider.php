@@ -13,6 +13,7 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         'App\Events\BookPublished' => [
             'App\Listeners\CreatePdf',
+            'App\Listeners\CalculateBookPage',
         ],
     ];
 

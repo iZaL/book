@@ -1,4 +1,4 @@
-<div class="row hidden-print">
+<div class="row hidden-print ethiopic">
     <div class="col-xs-12">
 
         <!-- START CONTENT ITEM -->

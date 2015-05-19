@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Src\Book\BookRepository;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,12 +28,16 @@ class ProfileController extends Controller
 
     /**
      * Get Authenticated Users Profile
+     * @param BookRepository $bookRepository
+     * @return \Illuminate\View\View
      */
-    public function getProfile()
+    public function getProfile(BookRepository $bookRepository)
     {
         $user = Auth::user();
 
-        return view('profile');
+        $books = $bookRepository->model->all();
+
+        return view('profile', compact('user', 'books'));
 
     }
 }
