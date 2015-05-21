@@ -31,19 +31,19 @@
                                     <tr>
                                         <td class="hidden-xs"><img src="img/product_01.jpg" width="75"></td>
                                         <td>
-                                            <a href="detail.html">{!! $book->title !!}</a>
+                                            <a href="detail.html"> {!! $book->title !!} </a>
 
-                                            <p>{!! \Str::limit(strip_tags($book->content)) !!}</p>
+                                            <p> {!! \Str::limit(strip_tags($book->body)) !!} </p>
                                         </td>
                                         <td>
-                                            <span class="label label-success">free</span>
+                                            <span> {{ $book->meta ? $book->meta->total_pages : 'N/A' }} </span>
 
                                         </td>
-                                        <td align="right">
-                                            <span>&euro; 123,- </span>
+                                        <td>
+                                            <span> {{ $book->status }} </span>
                                         </td>
-                                        <td align="right">
-                                            <span>&euro; 123,- </span>
+                                        <td>
+                                            <span> {{ $book->updated_at->format('Y-m-d') }} </span>
                                         </td>
                                     </tr>
                                 @endforeach

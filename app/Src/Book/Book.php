@@ -22,4 +22,28 @@ class Book extends BaseModel
     protected $guarded = ['id'];
 
     protected $localeStrings = ['title'];
+
+    /**
+     * @return mixed
+     * return All books that has a Draft Status
+     */
+    public function draftedBooks()
+    {
+        return $this->where('status', 'draft');
+    }
+
+    /**
+     * @return mixed
+     * return All books that has a Published Status
+     */
+    public function publishedBooks()
+    {
+        return $this->where('status', 'published');
+    }
+
+    public function meta()
+    {
+        return $this->hasOne('App\Src\Book\BookMeta');
+    }
+
 }

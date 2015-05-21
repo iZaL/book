@@ -17,8 +17,8 @@ class CreateBookMetasTable extends Migration {
 			//
             $table->increments('id');
             $table->integer('book_id');
-            $table->integer('total_pages');
-            $table->decimal('price',6,2);
+            $table->integer('total_pages')->nullable();
+            $table->decimal('price',6,2)->nullable();
             $table->timestamps();
             $table->softDeletes();
 		});

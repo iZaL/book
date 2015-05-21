@@ -20,7 +20,7 @@ class CreatePdf implements ShouldQueue
     public function __construct()
     {
         $this->pdf = new Pdf(base_path('vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64'));
-        $this->uploadPath = base_path('files/pdfs/');
+        $this->uploadPath = base_path('storage/app/pdfs/');
     }
 
     /**
@@ -32,7 +32,7 @@ class CreatePdf implements ShouldQueue
     public function handle(BookPublished $event)
     {
         // create PDF
-        $this->pdf->generateFromHtml($event->book->content, $this->uploadPath . $event->book->url);
+        $this->pdf->generateFromHtml($event->book->body, $this->uploadPath . $event->book->url);
 
         return true;
     }

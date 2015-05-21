@@ -16,12 +16,12 @@ Route::controllers([
 /*********************************************************************************************************
  * User Profile
  ********************************************************************************************************/
-Route::get('profile', 'ProfileController@getProfile');
+Route::get('profile', 'UserController@profile');
 
 /*********************************************************************************************************
  * Books
  ********************************************************************************************************/
-Route::resource('book', 'BooksController');
+Route::resource('book', 'BookController');
 
 /*********************************************************************************************************
  * Favorites
@@ -53,4 +53,10 @@ Route::group(['prefix' => 'admin', 'before' => ['']], function () {
 
     Route::get('/', 'Admin\HomeController@index');
 
+});
+Route::get('test', function () {
+    $book = App\Src\Book\Book::find(12);
+    $event = event(new \App\Events\BookPublished($book));
+
+    dd('a');
 });

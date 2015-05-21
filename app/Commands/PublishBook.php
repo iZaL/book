@@ -4,40 +4,21 @@ use App\Events\BookPublished;
 use App\Src\Book\BookRepository;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Bus\SelfHandling;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class PublishBook extends Command implements SelfHandling
 {
-    /**
-     * @var
-     */
-    private $title_en;
-    /**
-     * @var
-     */
-    private $title_ar;
-    /**
-     * @var
-     */
-    private $content;
-    /**
-     * @var
-     */
-    private $free;
+
+    private $request;
 
     /**
      * Create a new command instance.
-     * @param $title_en
-     * @param $title_ar
-     * @param $content
-     * @param $free
+     * @param Request $request
      */
-    public function __construct($title_en, $title_ar, $content, $free)
+    public function __construct(Request $request)
     {
-        $this->title_en = $title_en;
-        $this->title_ar = $title_ar;
-        $this->content = $content;
-        $this->free = $free;
+        $this->request = $request;
     }
 
     /**
@@ -51,22 +32,34 @@ class PublishBook extends Command implements SelfHandling
         // Create a Entry In Database
         $book = $this->storeInDB($bookRepository);
 
-        // Fire Events
+        // Create Book Meta Record in DB
+        $book->meta()->create([]);
+
+        // Fire Events While the Book is Being Published
+        // Refer EventServiceProvider Class For The Events Fired When the Book Is Published
         event(new BookPublished($book));
 
         return $book;
     }
 
+    /**
+     * @param BookRepository $bookRepository
+     * @return static
+     */
     private function storeInDB(BookRepository $bookRepository)
     {
         return $bookRepository->model->create([
-            'user_id' => Auth::user('id'),
-            'title_en' => $this->title_en,
-            'title_ar' => $this->title_ar,
-            'content' => $this->content,
-            'published' => 0,
-            'free' => $this->free,
-            'url' => $this->generateFileName()
+            'user_id'  => auth()->user()->id,
+//            'category_id'  => '1', // @todo,
+//            'cover_en'=>'',
+//            'cover_ar'=>'',
+//            'views'=>'',
+            'title_en' => $this->request->title_en,
+            'title_ar' => $this->request->title_ar,
+            'body'     => $this->request->body,
+            'status'   => 'draft', // published
+            'free'     => $this->request->free,
+            'url'      => $this->generateFileName()
         ]);
     }
 

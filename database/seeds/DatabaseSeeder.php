@@ -31,7 +31,8 @@ class DatabaseSeeder extends Seeder {
         if ( App::environment() == 'local' ) {
             Model::unguard();
             $this->cleanDatabase();
-            $this->call('UserTableSeeder');
+            $this->call('UsersTableSeeder');
+            $this->call('BooksTableSeeder');
 //            $this->call('CategoryTableSeeder');
 //            $this->call('ShopTableSeeder');
 //            $this->call('BalanceTableSeeder');
@@ -42,11 +43,11 @@ class DatabaseSeeder extends Seeder {
 
     private function cleanDatabase()
     {
-        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+//        DB::statement('SET FOREIGN_KEY_CHECKS=0');
         foreach ( $this->tables as $table ) {
             DB::table($table)->truncate();
         }
-        DB::statement('SET FOREIGN_KEY_CHECKS=1');
+//        DB::statement('SET FOREIGN_KEY_CHECKS=1');
     }
 
 }

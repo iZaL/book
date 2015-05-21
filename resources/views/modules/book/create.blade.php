@@ -6,7 +6,6 @@
 
 @section('style')
     @parent
-
 @stop
 
 @section('script')
@@ -28,7 +27,7 @@
 
 @section('content')
 
-    {!! Form::open(['action' => 'BooksController@store', 'method' => 'post'], ['class'=>'form-horizontal']) !!}
+    {!! Form::open(['action' => 'BookController@store', 'method' => 'post'], ['class'=>'form-horizontal']) !!}
 
     <div class="form-group ">
         {!! Form::label('free', 'Free Book ?:') !!}
@@ -46,8 +45,8 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('content', 'Book Content', ['class' => 'control-label']) !!}
-        {!! Form::textarea('content', null, ['class' => 'form-control editor','placeholder'=>'Book Content']) !!}
+        {!! Form::label('body', 'Book Content', ['class' => 'control-label']) !!}
+        {!! Form::textarea('body', null, ['class' => 'form-control editor','placeholder'=>'Book Content']) !!}
     </div>
 
     <div class="form-group">
@@ -55,7 +54,5 @@
     </div>
 
     {!! Form::close() !!}
-
-
 
 @stop

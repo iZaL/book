@@ -17,7 +17,7 @@ class CalculateBookPage implements ShouldQueue
      */
     public function __construct()
     {
-        $this->uploadPath = base_path('files/pdfs/');
+        $this->uploadPath = base_path('storage/app/pdfs/');
     }
 
     /**
@@ -29,8 +29,15 @@ class CalculateBookPage implements ShouldQueue
     public function handle(BookPublished $event)
     {
         // create PDF
+        $fpdi = new \FPDI();
 
-        return true;
+        // count the book page
+        $pageCount = $fpdi->setSourceFile($this->uploadPath.$event->book->url);
+
+        // update the database with total page count
+        $event->book->meta->total_pages = $pageCount;
+        $event->book->meta->save();
+        return $pageCount;
     }
 
 }

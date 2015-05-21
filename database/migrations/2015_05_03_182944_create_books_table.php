@@ -19,12 +19,12 @@ class CreateBooksTable extends Migration {
             $table->integer('category_id');
             $table->text('title_en');
             $table->text('title_ar');
-            $table->text('content');
+            $table->text('body');
             $table->text('cover_en');
             $table->text('cover_ar');
             $table->text('url');
             $table->boolean('free'); // url or html
-            $table->boolean('published'); // url or html
+            $table->enum('status',['draft','published'])->default('draft'); // url or html
             $table->bigInteger('views'); // url or html
             $table->timestamps();
             $table->softDeletes();
