@@ -1,13 +1,12 @@
-<?php namespace App\Commands;
+<?php namespace App\Jobs;
 
 use App\Events\BookPublished;
 use App\Src\Book\BookRepository;
-use Illuminate\Console\Command;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class PublishBook extends Command implements SelfHandling
+class PublishBook extends Job implements SelfHandling
 {
 
     private $request;

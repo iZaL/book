@@ -8,6 +8,8 @@ class BookTest extends TestCase
 {
     use WithoutMiddleware;
 
+    use DatabaseTransactions;
+
     /**
      * A basic functional test example.
      *
@@ -42,5 +44,6 @@ class BookTest extends TestCase
         $this->fileExists(base_path('storage/app/pdfs/' . $book->url));
 
         $this->onPage('/book');
+
     }
 }

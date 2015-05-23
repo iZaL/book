@@ -16,6 +16,8 @@
     </testsuites>
     <php>
         <env name="APP_ENV" value="testing"/>
+        <env name="DB_DRIVER" value="sqlite"/>
+        <env name="DB_FILE" value="/database.sqlite"/>
         <env name="DATABASE_DRIVER" value="sqlite"/>
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>

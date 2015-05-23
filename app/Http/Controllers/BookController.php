@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 
-use App\Commands\PublishBook;
 use App\Http\Requests\CreateBookRequest;
+use App\Jobs\PublishBook;
 use App\Src\Book\BookRepository;
 use Illuminate\Http\Request;
 
@@ -50,6 +50,7 @@ class BookController extends Controller
             'body'     => 'required',
             'free'     => 'boolean'
         ]);
+
         // dispatch the command
 
         // 1 - Publish The Book

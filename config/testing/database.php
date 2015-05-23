@@ -1,7 +1,5 @@
 <?php
 
 return [
-
     'default' => 'sqlite',
-
 ];
