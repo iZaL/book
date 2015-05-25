@@ -1,8 +1,8 @@
 {
-  "name": "book",
-  "version": "0.0.0",
+  "name": "ebook",
+  "version": "1.0.0",
   "authors": [
-    "ZaL <z4ls@live.com>"
+    "afdal"
   ],
   "license": "MIT",
   "ignore": [
@@ -10,7 +10,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "/vendor/bower_components"
   ],
   "dependencies": {
     "jquery": null,
@@ -25,5 +26,8 @@
     "startbootstrap-sb-admin-2": null,
     "bootstrap-datepicker": "~1.4.0",
     "tinymce": "~4.1.10"
-  }
+  },
+  "homepage": "https://github.com/iZaL/book",
+  "description": "ebook application",
+  "private": true
 }
