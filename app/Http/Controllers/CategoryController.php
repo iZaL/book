@@ -3,7 +3,7 @@
 use App\Commands\PublishBook;
 use App\Http\Requests\CreateBookRequest;
 
-class CategoriesController extends Controller
+class CategoryController extends Controller
 {
 
     public function __construct()
