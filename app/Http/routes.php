@@ -4,12 +4,11 @@
  ********************************************************************************************************/
 Route::get('locale/{lang}', ['as' => 'locale.select', 'uses' => 'LocaleController@setLocale']);
 
-
 /*********************************************************************************************************
  * Auth Routes
  ********************************************************************************************************/
 Route::controllers([
-    'auth' => 'AuthController',
+    'auth'     => 'AuthController',
     'password' => 'PasswordController',
 ]);
 
@@ -49,11 +48,12 @@ Route::get('home', 'HomeController@index');
 /*********************************************************************************************************
  * Admin Routes
  ********************************************************************************************************/
-Route::group(['prefix' => 'admin', 'before' => ['']], function () {
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'before' => ['auth']], function () {
 
-    Route::get('/', 'Admin\HomeController@index');
+    Route::get('/', 'HomeController@index');
 
 });
+
 Route::get('test', function () {
     $book = App\Src\Book\Book::find(12);
     $event = event(new \App\Events\BookPublished($book));
