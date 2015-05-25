@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 
-use App\Commands\PublishBook;
 use App\Http\Requests\CreateBookRequest;
+use App\Jobs\PublishBook;
 
 class CategoryController extends Controller
 {
