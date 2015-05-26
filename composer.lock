@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "49d33c3ab3a958426946d79ff2514b78",
+    "hash": "6fefa1030d4e54781c62d973ed098008",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -555,12 +555,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "ab7e0e55255e063f711025bf562fce17bdebf248"
+                "reference": "a74cf7c953f26bb70d13946105c1a7bb2beeb68f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/ab7e0e55255e063f711025bf562fce17bdebf248",
-                "reference": "ab7e0e55255e063f711025bf562fce17bdebf248",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/a74cf7c953f26bb70d13946105c1a7bb2beeb68f",
+                "reference": "a74cf7c953f26bb70d13946105c1a7bb2beeb68f",
                 "shasum": ""
             },
             "require": {
@@ -678,7 +678,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-05-25 14:27:32"
+            "time": "2015-05-25 20:31:06"
         },
         {
             "name": "laravelcollective/html",
@@ -2147,12 +2147,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "d9abfd11beccb5d5c77262e1b26df7e318b4cdba"
+                "reference": "c0114360dccbd0e7c1ce3d6440e5ceae25807e56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/d9abfd11beccb5d5c77262e1b26df7e318b4cdba",
-                "reference": "d9abfd11beccb5d5c77262e1b26df7e318b4cdba",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/c0114360dccbd0e7c1ce3d6440e5ceae25807e56",
+                "reference": "c0114360dccbd0e7c1ce3d6440e5ceae25807e56",
                 "shasum": ""
             },
             "require": {
@@ -2193,7 +2193,7 @@
                 "profiler",
                 "webprofiler"
             ],
-            "time": "2015-05-25 14:13:48"
+            "time": "2015-05-26 07:02:48"
         },
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -2685,6 +2685,102 @@
                 "test"
             ],
             "time": "2015-05-11 14:41:42"
+        },
+        {
+            "name": "laracasts/generators",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/Laravel-5-Generators-Extended.git",
+                "reference": "bf6d6ef779f397f6b1c0f133bbb8ebb6a55636e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/Laravel-5-Generators-Extended/zipball/bf6d6ef779f397f6b1c0f133bbb8ebb6a55636e0",
+                "reference": "bf6d6ef779f397f6b1c0f133bbb8ebb6a55636e0",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Laracasts\\Generators\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Way",
+                    "email": "jeffrey@laracasts.com"
+                }
+            ],
+            "description": "Extend Laravel 5's generators.",
+            "keywords": [
+                "generators",
+                "laravel"
+            ],
+            "time": "2015-05-07 15:53:57"
+        },
+        {
+            "name": "laracasts/testdummy",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/TestDummy.git",
+                "reference": "ba986a66b6f4a1e149355357353af3072d5521ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/TestDummy/zipball/ba986a66b6f4a1e149355357353af3072d5521ee",
+                "reference": "ba986a66b6f4a1e149355357353af3072d5521ee",
+                "shasum": ""
+            },
+            "require": {
+                "fzaninotto/faker": "~1.4",
+                "illuminate/support": "~4.0|~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/database": "~4.0|~5.0",
+                "phpspec/phpspec": "~2.0",
+                "phpunit/phpunit": "~4.7@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Laracasts\\TestDummy\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Way",
+                    "email": "jeffrey@laracasts.com"
+                }
+            ],
+            "description": "Easy test stubs",
+            "keywords": [
+                "factorygirl",
+                "laravel",
+                "stubs",
+                "testing"
+            ],
+            "time": "2015-04-27 15:56:12"
         },
         {
             "name": "maximebf/debugbar",
@@ -3981,7 +4077,9 @@
         "setasign/fpdf": 20,
         "codeception/codeception": 20,
         "barryvdh/laravel-debugbar": 20,
-        "barryvdh/laravel-ide-helper": 20
+        "barryvdh/laravel-ide-helper": 20,
+        "laracasts/generators": 20,
+        "laracasts/testdummy": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

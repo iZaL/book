@@ -19,7 +19,9 @@
 		"phpspec/phpspec": "~2.1",
         "codeception/codeception": "2.1.*@dev",
         "barryvdh/laravel-debugbar": "2.0.*@dev",
-        "barryvdh/laravel-ide-helper": "2.0.*@dev"
+        "barryvdh/laravel-ide-helper": "2.0.*@dev",
+		"laracasts/generators": "dev-master",
+		"laracasts/testdummy": "dev-master"
   },
   "autoload": {
       "classmap": [

@@ -12,7 +12,7 @@
             <nav class="navbar navbar-right header-nav" role="navigation">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ trans('word.account') }}</a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ trans('word.login') }}</a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="dropdown-content">
@@ -44,7 +44,7 @@
     </div>
 
     <div class="row header-top hidden-print">
-        <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3 ">
+        <div class="col-xs-12 col-sm-5 col-md-2 col-lg-1 ">
 
             <!-- START CONTENT ITEM -->
             <img src="/img/logo.png" alt="Logo" class="img-responsive logo">
@@ -53,7 +53,7 @@
         </div>
 
         <div class="hidden-xs hidden-sm col-md-offset-6 col-lg-offset-5 col-md-3 col-lg-4">
-            <img src="/img/banner_top.jpg" alt="No shipping" class="img-responsive">
+            {{--<img src="/img/banner_top.jpg" alt="No shipping" class="img-responsive">--}}
 
             <!-- START CONTENT ITEM -->
             <div class="input-group form-search header-search">

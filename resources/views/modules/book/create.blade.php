@@ -46,7 +46,7 @@
 
     <div class="form-group">
         {!! Form::label('body', 'Book Content', ['class' => 'control-label']) !!}
-        {!! Form::textarea('body', null, ['class' => 'form-control editor','placeholder'=>'Book Content']) !!}
+        {!! Form::textarea('body', null, ['class' => 'form-control editor','placeholder'=>'Book Content','style'=>'visibility: visible!important;']) !!}
     </div>
 
     <div class="form-group">

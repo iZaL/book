@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBookListsTable extends Migration {
+class CreatePreviewsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,15 +12,14 @@ class CreateBookListsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('book_lists', function(Blueprint $table)
+		Schema::create('previews', function(Blueprint $table)
 		{
 			//
             $table->increments('id');
-            $table->integer('book_id');
-            $table->integer('list_id');
+            $table->text('url');
             $table->timestamps();
             $table->softDeletes();
-		});
+        });
 	}
 
 	/**
@@ -30,11 +29,10 @@ class CreateBookListsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('book_lists', function(Blueprint $table)
+		Schema::table('previews', function(Blueprint $table)
 		{
-			//
             $table->drop();
-		});
+        });
 	}
 
 }

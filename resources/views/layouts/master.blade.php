@@ -21,14 +21,13 @@
     @section('style')
         <style>
             @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
-            html,body {
-                font-family: 'Droid Arabic Kufi' !important;
-            }
-            h1,h2,h3,h4,span,p,div,table {
-                font-family: 'Droid Arabic Kufi' !important;
+            h1,h2,h3,h4,span,p,div,table,a {
+                font-family: 'Droid Arabic Kufi' ,'Ubuntu' !important;
+                font-size: small !important;
             }
         </style>
-        <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        {{--<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">--}}
+        <link rel="stylesheet" href="/css/app.css"/>
         @if(App::getLocale() == 'ar')
             <link href="/bower_components/bootstrap-rtl/dist/css/bootstrap-rtl.css" rel="stylesheet">
         @endif
@@ -48,10 +47,12 @@
         <script src="/bower_components/modernizr/modernizr.js"></script>
 
         <!-- jQuery -->
-        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        {{--<script src="/bower_components/jquery/dist/jquery.min.js"></script>--}}
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        {{--<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>--}}
+
+        <script src="/js/app.js"></script>
 
         <script src="/bower_components/nivoslider/jquery.nivo.slider.pack.js"></script>
         <script src="/bower_components/colorbox/jquery.colorbox-min.js"></script>
