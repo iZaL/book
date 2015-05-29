@@ -1,0 +1,12 @@
+
+
+.dropdown-content .input-group {
+    margin-bottom: 5px;
+}
+.dropdown-content .btn {
+    margin: 3px;
+}
+
+.navbar .nav > li > .dropdown-menu {
+    width: 289px;
+}

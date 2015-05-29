@@ -24,14 +24,14 @@ $factory->define('App\Src\User\User', function ($faker) {
 $factory->define('App\Src\Book\Book', function ($faker) {
     return [
         'user_id' => 1,
-        'cover_en'=>'',
-        'cover_ar'=>'',
-        'views'=>'',
+        'cover_en' => '',
+        'cover_ar' => '',
+        'views' => '',
         'category_id' => 1,
         'title_en' => $faker->word,
         'title_ar' => $faker->word,
-        'body'  => $faker->text,
-        'url'      => 'test.pdf',
-        'free'     => 0,
+        'body' => $faker->text,
+        'url' => 'test.pdf',
+        'free' => 0,
     ];
 });

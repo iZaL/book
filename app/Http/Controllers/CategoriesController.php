@@ -18,12 +18,16 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        return view('modules.book.index');
+        return view('modules.category.index');
     }
 
     public function create()
     {
         return view('modules.book.create');
+    }
+
+    public function show ($id) {
+        return 'this is from categories show'. $id;
     }
 
     /**

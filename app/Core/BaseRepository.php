@@ -9,6 +9,8 @@ use Illuminate\Support\MessageBag;
 abstract class BaseRepository
 {
 
+
+
     /**
      * @return mixed
      */

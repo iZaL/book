@@ -172,8 +172,9 @@ input[type=password] {
 .dropdown-content {
     /* For using a div in a dropdown to show some info */
     padding: 5px 5px 5px 20px;
-    width: 200px;
+    width: 280px;
 }
+
 
 .dropdown-content-wide {
     width: 300px;

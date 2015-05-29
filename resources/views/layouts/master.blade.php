@@ -19,27 +19,22 @@
     <meta name="viewport" content="width=device-width">
 
     @section('style')
-        <style>
-            @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
-            html,body {
-                font-family: 'Droid Arabic Kufi' !important;
-            }
-            h1,h2,h3,h4,span,p,div,table {
-                font-family: 'Droid Arabic Kufi' !important;
-            }
-        </style>
-        <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        @include('partials.fonts')
+        <link rel="stylesheet" href="/css/app.css"/>
         @if(App::getLocale() == 'ar')
             <link href="/bower_components/bootstrap-rtl/dist/css/bootstrap-rtl.css" rel="stylesheet">
+            <link rel="stylesheet" href="/css/custom_ar.css">
         @endif
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=McLaren">
         <link rel="stylesheet" href="/bower_components/nivoslider/nivo-slider.css">
         <link rel="stylesheet" href="/bower_components/colorbox/example1/colorbox.css">
         <link rel="stylesheet" href="/bower_components/nivoslider/themes/bar/bar.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="/bower_components/nivoslider/themes/light/light.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css" type="text/css"/>
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/custom.css">
+        @if(App::getLocale() == 'en')
+            <link rel="stylesheet" href="/css/custom_en.css">
+        @endif
 
     @show
 
@@ -78,7 +73,7 @@
 
     @include('partials.subfooter')
 
-    @include('partials.footer')
+    {{--@include('partials.footer')--}}
 
 </div>
 

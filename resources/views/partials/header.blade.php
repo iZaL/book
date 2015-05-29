@@ -3,57 +3,21 @@
     <!-- Facebook div for like button -->
     <div id="fb-root"></div>
 
-    <!-- Div for shade line -->
+    <!-- toolbar -->
+    @include('partials.toolbar')
 
-    <div class="row hidden-print">
-        <div class="col-xs-12">
-
-            <!-- START CONTENT ITEM -->
-            <nav class="navbar navbar-right header-nav" role="navigation">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ trans('word.account') }}</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="dropdown-content">
-                                    {!! Form::open(['url' => '/auth/login', 'method' => 'post']) !!}
-                                    <div class="form-group">
-                                        {!! Form::text('email', null , ['class' => 'form-control','placeholder'=>trans('word.email')]) !!}
-                                    </div>
-                                    <div class="form-group">
-                                        {!! Form::password('password', ['class' => 'form-control','placeholder'=>trans('word.password')]) !!}
-                                    </div>
-                                    <div class="form-group">
-                                        {!! Form::submit(trans('word.login'), ['class' => 'form-control']) !!}
-                                    </div>
-                                    {!! Form::close() !!}
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    @if(App::getLocale() == 'en')
-                        <li><a href="{{ action('LocaleController@setLocale',['lang'=>'ar'])}}">العربية</a></li>
-                    @else
-                        <li><a href="{{ action('LocaleController@setLocale',['lang'=>'en'])}}">En</a></li>
-                    @endif
-                </ul>
-            </nav>
-            <!-- END CONTENT ITEM -->
-
-        </div>
-    </div>
 
     <div class="row header-top hidden-print">
-        <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3 ">
+        <div class="col-xs-12 col-sm-5 col-md-3 col-lg-2 ">
 
             <!-- START CONTENT ITEM -->
-            <img src="/img/logo.png" alt="Logo" class="img-responsive logo">
+            <img src="/img/logo.png" alt="Logo" class="img-responsive logo" style="max-width: 110px;">
             <!-- END CONTENT ITEM -->
 
         </div>
 
         <div class="hidden-xs hidden-sm col-md-offset-6 col-lg-offset-5 col-md-3 col-lg-4">
-            <img src="/img/banner_top.jpg" alt="No shipping" class="img-responsive">
+
 
             <!-- START CONTENT ITEM -->
             <div class="input-group form-search header-search">
@@ -63,6 +27,8 @@
                 </span>
             </div>
             <!-- END CONTENT ITEM -->
+
+            <img src="/img/banner_top.jpg" alt="No shipping" class="img-responsive">
 
         </div>
     </div>

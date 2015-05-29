@@ -32,7 +32,10 @@ class CreatePdf implements ShouldQueue
     public function handle(BookPublished $event)
     {
         // create PDF
+        // to enforce the app to use UTF-8 for arabic content
+        $this->pdf->setOption('encoding', 'UTF-8');
         $this->pdf->generateFromHtml($event->book->body, $this->uploadPath . $event->book->url);
+
 
         return true;
     }

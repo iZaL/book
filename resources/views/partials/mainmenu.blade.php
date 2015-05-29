@@ -14,8 +14,8 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-left {{ App::getLocale() == 'ar' ? 'pull-right': '' }}">
-                    <li><a href="{{ url('/') }}"><span class="glyphicon glyphicon-home"></span> {{ trans('word.home') }}</a></li>
-                    <li><a href="category.html">{{ trans('word.category') }}</a></li>
+                    <li><a href="{{ url('/') }}"><i class="fa fa-home"></i> {{ trans('word.home') }}</a></li>
+                    <li><a href="{{ url('/category') }}">{{ trans('word.category') }}</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ trans('word.read') }} <b
                                     class="caret"></b></a>
@@ -24,7 +24,7 @@
                             <li><a href="detail.html">{{ trans('word.poems') }}</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">{{ trans('word.contact') }}</a></li>
+                    <li><a href="{{ url('contactus') }}">{{ trans('word.contact') }}</a></li>
                 </ul>
             </div>
         </nav>

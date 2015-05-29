@@ -10,14 +10,15 @@
 
 @section('script')
     @parent
-    <script src="/vendor/tinymce/tinymce.jquery.min.js"></script>
+    <script src="/bower_components/tinymce/tinymce.min.js"></script>
+    <script src="/bower_components/tinymce/tinymce.jquery.min.js"></script>
     <script type="text/javascript">
         tinymce.init({
             selector: "textarea.editor",
             plugins: [
-                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
-                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-                "save table contextmenu directionality emoticons template paste textcolor jbimages directionality"
+                ["advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker"],
+                ["searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking"],
+                ["save table contextmenu directionality emoticons template paste textcolor  directionality"]
             ],
             toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages | print preview media fullpage | forecolor backcolor emoticons | ltr rtl ",
             relative_urls: false
@@ -45,8 +46,9 @@
     </div>
 
     <div class="form-group">
+
         {!! Form::label('body', 'Book Content', ['class' => 'control-label']) !!}
-        {!! Form::textarea('body', null, ['class' => 'form-control editor','placeholder'=>'Book Content']) !!}
+        {!! Form::textarea('body', null, ['content'=>'text/html; charset=utf-8','class' => 'form-control editor','placeholder'=>'Book Content']) !!}
     </div>
 
     <div class="form-group">
