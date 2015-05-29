@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder {
         'categories',
         'types',
         'books',
-        'lists',
-        'book_lists',
+        'previews',
+        'book_previews',
         'book_readers',
         'book_metas',
         'purchases'

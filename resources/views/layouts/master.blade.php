@@ -43,10 +43,12 @@
         <script src="/bower_components/modernizr/modernizr.js"></script>
 
         <!-- jQuery -->
-        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        {{--<script src="/bower_components/jquery/dist/jquery.min.js"></script>--}}
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        {{--<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>--}}
+
+        <script src="/js/app.js"></script>
 
         <script src="/bower_components/nivoslider/jquery.nivo.slider.pack.js"></script>
         <script src="/bower_components/colorbox/jquery.colorbox-min.js"></script>
