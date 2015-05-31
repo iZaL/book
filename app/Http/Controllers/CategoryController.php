@@ -1,9 +1,9 @@
 <?php namespace App\Http\Controllers;
 
-use App\Commands\PublishBook;
 use App\Http\Requests\CreateBookRequest;
+use App\Jobs\PublishBook;
 
-class CategoriesController extends Controller
+class CategoryController extends Controller
 {
 
     public function __construct()
