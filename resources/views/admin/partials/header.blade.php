@@ -31,5 +31,5 @@
 
         </div>
     </div>
-        @include('partials.mainmenu')
+        @include('admin.partials.mainmenu')
 </header>

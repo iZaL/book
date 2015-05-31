@@ -111,5 +111,8 @@ return [
     'to'                    => 'to',
     'tags'                  => 'tags',
     'arabic'                => 'Arabic',
-    'english'               => 'English'
+    'english'               => 'English',
+    'admin-panel'           => 'Admin Panel',
+    'create-book'           => 'Create Book',
+    'account'               => 'My Account'
 ];

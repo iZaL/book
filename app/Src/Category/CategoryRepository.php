@@ -2,11 +2,7 @@
 
 use App\Core\BaseRepository;
 
-class CategoryRepository extends BaseRepository
-{
-
-    public $model;
-
+class CategoryRepository extends BaseRepository {
     /**
      * Construct
      * @param Category $model

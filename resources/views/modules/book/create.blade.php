@@ -1,4 +1,4 @@
-@extends('layouts.one_col')
+@extends('admin.layouts.one_col')
 
 @section('title')
     <h1>Publish Your Book</h1>
@@ -46,13 +46,8 @@
     </div>
 
     <div class="form-group">
-
         {!! Form::label('body', 'Book Content', ['class' => 'control-label']) !!}
-<<<<<<< HEAD
         {!! Form::textarea('body', null, ['content'=>'text/html; charset=utf-8','class' => 'form-control editor','placeholder'=>'Book Content']) !!}
-=======
-        {!! Form::textarea('body', null, ['class' => 'form-control editor','placeholder'=>'Book Content','style'=>'visibility: visible!important;']) !!}
->>>>>>> 85943e1343e9950a836fa904d8c87e90550bf3d5
     </div>
 
     <div class="form-group">

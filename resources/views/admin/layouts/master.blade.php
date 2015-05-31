@@ -1,69 +1,85 @@
-<!DOCTYPE html >
-<html lang="en">
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="nl"><![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="nl"><![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="nl"><![endif]-->
+<!--[if IE]>
+<html class="no-js ie" lang="nl"><![endif]-->
+<!--[if !IE]><!-->
+<html class="no-js" lang="nl"><!--<![endif]-->
+
 <head>
+
     <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Shop</title>
+    <title>@yield(strip_tags('title'),'E-Boook')</title>
+    <meta name="description" content="Page description here">
+    <meta name="author" content="BigBase - D. Tiems">
+    <meta name="viewport" content="width=device-width">
 
     @section('style')
-        <!-- Bootstrap Core CSS -->
-        <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- MetisMenu CSS -->
-        <link href="/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-
-        <!-- Custom CSS -->
-        <link href="/css/sb-admin-2.css" rel="stylesheet">
-
-        <link href="/css/admin.css" rel="stylesheet">
-
-        <!-- Custom Fonts -->
-        <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-        <link href="/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css">
+        @include('partials.fonts')
+        <link rel="stylesheet" href="/css/app.css"/>
+        @if(App::getLocale() == 'ar')
+            <link href="/bower_components/bootstrap-rtl/dist/css/bootstrap-rtl.css" rel="stylesheet">
+            <link rel="stylesheet" href="/css/custom_ar.css">
+        @endif
+        <link rel="stylesheet" href="/bower_components/nivoslider/nivo-slider.css">
+        <link rel="stylesheet" href="/bower_components/colorbox/example1/colorbox.css">
+        <link rel="stylesheet" href="/bower_components/nivoslider/themes/bar/bar.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="/bower_components/nivoslider/themes/light/light.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/custom.css">
+        @if(App::getLocale() == 'en')
+            <link rel="stylesheet" href="/css/custom_en.css">
+        @endif
 
     @show
+
+    @section('script')
+        <script src="/js/config.js"></script>
+        <script src="/bower_components/modernizr/modernizr.js"></script>
+
+        <!-- jQuery -->
+        {{--<script src="/bower_components/jquery/dist/jquery.min.js"></script>--}}
+
+        <!-- Bootstrap Core JavaScript -->
+        {{--<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>--}}
+
+        <script src="/js/app.js"></script>
+
+        <script src="/bower_components/nivoslider/jquery.nivo.slider.pack.js"></script>
+        <script src="/bower_components/colorbox/jquery.colorbox-min.js"></script>
+        <script src="/bower_components/respond/dest/respond.min.js"></script>
+        <script src="/js/script.js"></script>
+    @show
+
 </head>
 
 <body>
-<div id="wrapper">
 
-    @include('admin.partials.sidebar')
+<div class="header-shadow"></div>
 
-    <div id="page-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    @include('admin.partials.notifications')
+<div class="container">
 
-                    @section('content')
+    @include('admin.partials.header')
 
-                    @show
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container-fluid -->
-    </div>
+    @yield('title')
+
+    @include('partials.notifications')
+
+    @section('content')
+    @show
+
+    @include('partials.subfooter')
+
+    {{--@include('partials.footer')--}}
 
 </div>
-@section('script')
-    <!-- jQuery -->
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="/bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
-    <script src="/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="/js/sb-admin-2.js"></script>
-@show
 
 </body>
+
+
 </html>

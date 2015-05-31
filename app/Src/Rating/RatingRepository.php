@@ -4,9 +4,6 @@ use App\Core\BaseRepository;
 
 class RatingRepository extends BaseRepository
 {
-
-    public $model;
-
     /**
      * Construct
      * @param Rating $model

@@ -1,11 +1,8 @@
 <?php namespace App\Src\Book;
-
 use App\Core\BaseModel;
 use App\Core\LocaleTrait;
-
 class Book extends BaseModel
 {
-
     use LocaleTrait;
     /**
      * The database table used by the model.
@@ -13,16 +10,13 @@ class Book extends BaseModel
      * @var string
      */
     protected $table = 'books';
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $guarded = ['id'];
-
     protected $localeStrings = ['title'];
-
     /**
      * @return mixed
      * return All books that has a Draft Status
@@ -31,7 +25,6 @@ class Book extends BaseModel
     {
         return $this->where('status', 'draft');
     }
-
     /**
      * @return mixed
      * return All books that has a Published Status
@@ -40,10 +33,20 @@ class Book extends BaseModel
     {
         return $this->where('status', 'published');
     }
-
     public function meta()
     {
         return $this->hasOne('App\Src\Book\BookMeta');
     }
 
+    /*
+     * RELSATIONS
+     * */
+
+    /*
+     * a book belongs to one user
+     * */
+
+    public function user() {
+        return $this->belongsTo('App\Src\User\User');
+    }
 }

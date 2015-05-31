@@ -1,14 +1,22 @@
 <?php namespace App\Http\Controllers;
 
-use App\User;
+
+use App\Src\Role\RoleRepository;
+use App\Src\User\UserRepository;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
 
-    public function __construct()
+
+    private $user;
+    private $role;
+
+    public function __construct(UserRepository $user, RoleRepository $role)
     {
         $this->middleware('auth');
+        $this->user = $user;
+        $this->role = $role;
     }
 
     /**
@@ -17,6 +25,7 @@ class UserController extends Controller
      */
     public function profile()
     {
+
         $user = Auth::user();
 
         // get the books uploaded by this user
@@ -25,4 +34,6 @@ class UserController extends Controller
         return view('modules.user.profile', compact('user', 'books'));
 
     }
+
+
 }
